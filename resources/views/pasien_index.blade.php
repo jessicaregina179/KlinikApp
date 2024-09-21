@@ -9,11 +9,11 @@
                     <div class="card-body">
                         <h3>Data pasien</h3>
                         <div class="row mb-3 mt-3">
-                            <div class="col-md-6">
-                                <a href="/pasien/create" class="btn btn-primary btn-sm">Tambah Pasien</a>
-                            </div>
+                        <div class="col-md-6">
+                            <a href="/pasien/create" class="btn btn-primary btn-sm">Tambah Pasien</a>
                         </div>
-                        <table class="table table-striped">
+                    </div>
+                    <table class="table table-striped">
                             <thead>
                                 <tr>
                                     <th><center>NO</center></th>
@@ -36,7 +36,8 @@
                                         </td>
                                         <td>{{ $item->jenis_kelamin }}</td>
                                         <td>{{ $item->umur }}</td>
-                                        <td>{{ $item->foto }}</td>
+                                        {{$foto=$item->foto ? $item->foto : '0.png'}}
+                                        <td><img src="/storage/images{{ $item->foto }}" alt="foto" height="30 px"></td>
                                         <td>{{ $item->alamat }}</td>
                                         <td>
                                             <a href="?m=resources/views/edit&id='.$r['id'].'">Edit</a> 

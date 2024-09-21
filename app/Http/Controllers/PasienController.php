@@ -21,7 +21,7 @@ class PasienController extends Controller
      */
     public function create()
     {
-        //
+        return view('pasien_create');
     }
 
     /**
@@ -29,8 +29,20 @@ class PasienController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $requestData = $request->validate([
+            'no_pasien'     => 'required|unique:pasiens,no_pasien', 
+            'nama'          => 'required',
+            'umur'          => 'required|numeric',
+            'jenis_kelamin' => 'required|in:laki-laki,perempuan',
+            'alamat'        => 'nullable',
+            'foto'          => 'required|image|mimes:jpg,jpeg,png|max:5000',
+        ]);
+        $pasien = new \App\Models\Pasien(); 
+        $pasien->fill($requestData);
+        $pasien->foto = $request->file('foto')->store('public');
+        $pasien->save();
+        return redirect('/pasien')->with('pesan', 'Data sudah disimpan');
+    }   
 
     /**
      * Display the specified resource.
