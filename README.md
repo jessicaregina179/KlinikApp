@@ -4,7 +4,7 @@
 
 Membuat aplikasi klinik menggunakan Laravel 11 diajarkan di StudentDay Programming peminatan Web Programming
 
-### pertemuan 8
+### Pertemuan 8
 Tambah data
 --minus foto
 
