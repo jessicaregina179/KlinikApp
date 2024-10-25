@@ -11,3 +11,9 @@ Tambah data
 ### Pertemuan 9 PSTS
 Hapus data dan edit data
 --minus gambar belum berhasil
+
+### Pertemuan 10
+Membuat Poli
+
+### Pertemuan 11
+Membuat CRUD Poli
