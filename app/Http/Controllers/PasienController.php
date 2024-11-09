@@ -12,6 +12,12 @@ class PasienController extends Controller
      */
     public function index()
 {
+    if (request()->has('q')) {
+        $daftar = \App\Models\Daftar::search(request('q'))->paginate(20);
+    } else {
+        $daftar = \App\Models\Daftar::with('pasien')->latest()->paginate(20);
+    }
+
     $pasien = \App\Models\Pasien::latest()->paginate(10);
     $data['pasien'] = $pasien;
     return view('pasien_index', $data);

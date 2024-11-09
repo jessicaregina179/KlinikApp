@@ -10,4 +10,5 @@ class Pasien extends Model
     use HasFactory;
     // Jessica Regina
     protected $guarded = [];
+    
 }

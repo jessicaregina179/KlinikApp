@@ -17,3 +17,10 @@ Membuat Poli
 
 ### Pertemuan 11
 Membuat CRUD Poli
+
+### Pertemuan 13
+- Penyelesaian CRUD Poli
+
+### Pertemuan 14
+- Search Pasien
+- Search Daftar

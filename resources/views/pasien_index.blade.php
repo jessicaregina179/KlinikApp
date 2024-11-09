@@ -5,13 +5,20 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">Form Pasien</div>
-                    <div class="card-body">
-                        <h3>Data pasien</h3>
-                        <div class="row mb-3 mt-3">
-                        <div class="col-md-6">
-                            <a href="/pasien/create" class="btn btn-primary btn-sm">Tambah Pasien</a>
+                    <div class="row mb-3 mt-3">
+                        <div class="col-md-3 h4">
+                            Data Pasien
                         </div>
-                    </div>
+                        <div class="col-md-5">
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="text" name="q" placeholder="Cari Nama, No Pasien" value="{{ request('q') }}" aria-label="Search">
+                                <button class="btn btn-outline-primary" type="submit">Cari</button>
+                            </form>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="/daftar/create" class="btn btn-primary btn-md float-end">Tambah Pasien</a>
+                        </div>
+                    </div>
                     <table class="table table-striped">
                             <thead>
                                 <tr>
